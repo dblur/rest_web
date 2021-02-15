@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category page</title>
+
+    <script src="/js/categorypage.js"></script>
+</head>
+<body>
+
+<p>
+    Category ID: <span id="id"></span><br/>
+    Category Name: <span id="name"></span><br/>
+
+<div>
+    <button onclick="location.href='/delete/category/' + categoryId">Удалить категорию</button>
+</div>
+
+<button onclick="location.href='/banners/list'">Список баннеров</button>
+<button onclick="location.href='/'">Return to main</button>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banner page</title>
+
+    <script src="/js/bannerpage.js"></script>
+
+</head>
+<body>
+
+<p>
+    Category <span id="category"></span><br/>
+    Name: <span id="name"></span><br/>
+    Price: <span id="price"></span> $<br/>
+    Content: <span id="content"></span>
+</p>
+
+<button onclick="location.href='/delete/banner/' + bannerId">Удалить баннер</button>
+<button onclick="location.href='/banners/list'">Список баннеров</button>
+<button onclick="location.href='/'">Return to main</button>
+</body>
+</html>

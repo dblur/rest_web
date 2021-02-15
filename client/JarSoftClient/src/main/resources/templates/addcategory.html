@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add category</title>
+
+    <script src="/js/addcategory.js"></script>
+</head>
+<body>
+
+<form>
+    <label for="name">New category</label>
+
+    <div id="catDiv">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" required data-copy="true">
+        <label hidden for="req_name">reqname</label>
+        <input hidden type="text" name="req_name" id="req_name">
+    </div>
+
+
+    <button id="button">Submit</button>
+    <button onclick="location.href='/'">Return to main</button>
+</form>
+
+<script>
+
+    // я не знаю, как задублировать строки category.name и category.req_name. Нашел пока такой способ.
+    // если придумаю лучше - переделаю. Этот способ мне совершенно не нравится...
+    // еще скрипт не работает, если его перенести в .js
+
+    const catDiv = document.getElementById('catDiv');
+    catDiv.addEventListener('keyup', function (e) {
+        e = e.target || e.srcElement;
+        if(e.getAttribute('data-copy') !== 'true') return;
+        const value = e.value;
+        const child = e.parentNode.children;
+        for(let i = 0; i < child.length; i++) {
+            child[i].value = value;
+        }
+    })
+</script>
+
+</body>
+</html>

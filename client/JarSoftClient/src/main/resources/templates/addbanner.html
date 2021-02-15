@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    <meta charset="UTF-8">-->
+    <title>Add banner</title>
+
+    <script src="/js/addbanner.js"></script>
+    <script src="/js/categorieslist.js"></script>
+
+</head>
+<body>
+
+<form>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name"> <br/>
+
+    <label for="category_id">Category: </label>
+    <select id="category_id">
+
+        <label for="price">Price: </label>
+        <input type="text" name="price" id="price"> <br/>
+
+        <label for="content">Content: </label>
+        <textarea type="text" name="content" id="content"></textarea> <br/>
+
+        <button>Submit</button>
+    </select>
+</form>
+
+<button onclick="location.host='/banners/list'">Список баннеров</button>
+<button onclick="location.href='/'">Return to main</button>
+
+</body>
+</html>
